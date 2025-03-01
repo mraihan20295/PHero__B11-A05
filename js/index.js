@@ -88,7 +88,6 @@ const colors = [
   "#F2F7FE",
 ];
 let colorIndex = 0;
-
 document.getElementById("theme-btn").addEventListener("click", function () {
   document.body.style.backgroundColor = colors[colorIndex];
   colorIndex++;
