@@ -73,3 +73,27 @@ document
 const taskCardsContainer = document.getElementById("Task-Cards-Container");
 document.getElementById("tasks-remaining-count").innerText =
   taskCardsContainer.childElementCount;
+
+// Theme Color Btn
+const colors = [
+  "#191E24",
+  "#EFEAE7",
+  "#191E24",
+  "#E4D8B5",
+  "#F7E83A",
+  "#162455",
+  "#24252F",
+  "#00111D",
+  "#242932",
+  "#F2F7FE",
+];
+let colorIndex = 0;
+
+document.getElementById("theme-btn").addEventListener("click", function () {
+  document.body.style.backgroundColor = colors[colorIndex];
+  colorIndex++;
+
+  if (colorIndex >= colors.length) {
+    colorIndex = 0;
+  }
+});
