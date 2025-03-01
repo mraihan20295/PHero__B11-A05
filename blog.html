@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard Blogs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-[var(--clr-secondary)] min-h-screen py-6 font-[Poppins]">
+    <div class="max-w-[1550px] w-11/12 mx-auto">
+        <!-- Header-Navigation -->
+        <header class="bg-white py-4 px-6 rounded-2xl">
+            <nav class="flex items-center gap-9">
+                <div class="flex items-center gap-3 mr-auto text-4xl">
+                    <img src="assets/logo.png" alt="">
+                    <h1 class="font-light">Dev<span class="font-bold">Board</span></h1>
+                </div>
+
+                <button id="index-page-redirect" class="btn btn-modified">
+                    Back to Desk
+                </button>
+            </nav>
+        </header>
+        <!-- Main -->
+        <main class="">
+            <h2 class="text-center font-bold text-4xl my-6">Blogs</h2>
+            <div class="mt-4 collapse collapse-plus bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-3" checked="checked" />
+                <div class="collapse-title font-semibold">What are the different ways to select an element in the DOM?
+                </div>
+                <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the
+                    registration process.</div>
+            </div>
+            <div class="mt-4 collapse collapse-plus bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title font-semibold">What is the difference between innerHTML, innerText, and
+                    textContent ?</div>
+                <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the
+                    instructions sent to your email.</div>
+            </div>
+            <div class="mt-4 collapse collapse-plus bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title font-semibold">What is event delegation in the DOM?</div>
+                <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make
+                    changes.</div>
+            </div>
+            <div class="mt-4 collapse collapse-plus bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title font-semibold">What is event bubbling in the DOM?</div>
+                <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make
+                    changes.</div>
+            </div>
+            <div class="mt-4 collapse collapse-plus bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title font-semibold">How do you create, add, and remove elements using JavaScript?
+                </div>
+                <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make
+                    changes.</div>
+            </div>
+        </main>
+    </div>
+    <script src="js/blog.js"></script>
+</body>
+
+</html>

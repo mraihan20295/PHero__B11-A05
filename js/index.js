@@ -9,10 +9,9 @@ const CurrentDateMonthYear = now.toLocaleDateString("en-US", {
   day: "2-digit",
   year: "numeric",
 });
-
 document.getElementById("todays-date").innerHTML = `
-    <span>${CurrentWeekDay} ,</span>
-    <span> ${CurrentDateMonthYear}</span>
+<span>${CurrentWeekDay} ,</span>
+<span> ${CurrentDateMonthYear}</span>
 `;
 
 // Task Cards' Complete Buttons Click Event Handler
@@ -25,6 +24,12 @@ for (let btnEl of completeBtnEls) {
       document.getElementById("tasks-completed-count").innerText
     );
 
+    // Set Alerts
+    alert("Board Updated Successfully");
+    if (remainingTasksCount === 1)
+      alert("Congrats🎉!! You have successfully completed all current tasks");
+
+    // Update dom of task count elements
     document.getElementById("tasks-remaining-count").innerText =
       remainingTasksCount - 1;
     document.getElementById("tasks-completed-count").innerText =
@@ -49,15 +54,6 @@ for (let btnEl of completeBtnEls) {
     // Append New Elements to the Activity Log Container
     activityLogContainer.appendChild(newLogEl);
     newLogEl.classList.add("activity-log-styles");
-
-    // Set Alerts, setTimeout function is used to make sure alerts execute after the all other codes finish execution
-    setTimeout(() => {
-      alert("Board Updated Successfully");
-
-      if (remainingTasksCount === 1) {
-        alert("Congrats🎉!! You have successfully completed all current tasks");
-      }
-    }, 0);
   });
 }
 
@@ -66,7 +62,14 @@ document.getElementById("clear-history").addEventListener("click", function () {
   activityLogContainer.innerHTML = "";
 });
 
-// Make the Remaining Tasks Count dynamic, the remaining tasks count will update automatically according the number of cards in the cards container element
+// Page Redirect
+document
+  .getElementById("blog-page-redirect")
+  .addEventListener("click", function () {
+    window.location.href = "blog.html";
+  });
+
+// Updates remaining tasks-count dynamically based on the number of cards.
 const taskCardsContainer = document.getElementById("Task-Cards-Container");
 document.getElementById("tasks-remaining-count").innerText =
   taskCardsContainer.childElementCount;
