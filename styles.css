@@ -15,6 +15,17 @@
   border-radius: 8px;
 }
 
+/* Today's Date placeholder element styles */
+#todays-date > span:first-child {
+  font-size: 1.375rem;
+}
+
+#todays-date > span:last-child {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-wrap: nowrap;
+}
+
 /* Activity Log Container Messgaes' Styles */
 
 .activity-log-styles {

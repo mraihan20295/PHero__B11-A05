@@ -1,6 +1,20 @@
 const completeBtnEls = document.getElementsByClassName("task-complete-btn");
 const activityLogContainer = document.getElementById("activity-logs");
 
+// Set Today's Date in the Dashboard
+const now = new Date();
+const CurrentWeekDay = now.toLocaleDateString("en-US", { weekday: "short" });
+const CurrentDateMonthYear = now.toLocaleDateString("en-US", {
+  month: "short",
+  day: "2-digit",
+  year: "numeric",
+});
+
+document.getElementById("todays-date").innerHTML = `
+    <span>${CurrentWeekDay} ,</span>
+    <span> ${CurrentDateMonthYear}</span>
+`;
+
 // Task Cards' Complete Buttons Click Event Handler
 for (let btnEl of completeBtnEls) {
   btnEl.addEventListener("click", function () {
