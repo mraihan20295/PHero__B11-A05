@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+
+:root {
+  --clr-primary: #3752fd;
+  --clr-secondary: #f4f7ff;
+}
+
+/* Btns Modified */
+
+.btn-modified {
+  background: var(--clr-primary);
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+/* Activity Log Container Messgaes' Styles */
+
+.activity-log-styles {
+  background: var(--clr-secondary);
+  padding: 10px;
+  border-radius: 8px;
+  margin-block: 1.5rem;
+}
