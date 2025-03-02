@@ -32,34 +32,53 @@
                 <input type="radio" name="my-accordion-3" checked="checked" />
                 <div class="collapse-title font-semibold">What are the different ways to select an element in the DOM?
                 </div>
-                <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the
-                    registration process.</div>
+                <div class="collapse-content text-sm">There are several ways to grab elements in the DOM, depending on
+                    what you're looking for. You can use getElementById("id") to select an element by its ID, or
+                    getElementsByClassName("class") to target elements with a specific class. If you need all elements
+                    of a certain type, getElementsByTagName("tag") does the job. The more modern
+                    querySelector("selector") and querySelectorAll("selector") let you use CSS selectors to find one or
+                    multiple elements, making it super flexible.</div>
             </div>
             <div class="mt-4 collapse collapse-plus bg-base-100 border border-base-300">
                 <input type="radio" name="my-accordion-3" />
                 <div class="collapse-title font-semibold">What is the difference between innerHTML, innerText, and
                     textContent ?</div>
-                <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the
-                    instructions sent to your email.</div>
+                <div class="collapse-content text-sm">The main difference is how they handle text and HTML content.
+                    innerHTML gets or sets the HTML inside an element, meaning it can insert new HTML tags, which can be
+                    a security risk if not handled properly. innerText only returns the visible text inside an element,
+                    ignoring hidden elements and formatting. textContent, on the other hand, gets all text inside the
+                    element, including hidden elements, and doesn't process HTML. So, if you need raw text without
+                    worrying about formatting, textContent is usually the safest option.</div>
             </div>
             <div class="mt-4 collapse collapse-plus bg-base-100 border border-base-300">
                 <input type="radio" name="my-accordion-3" />
                 <div class="collapse-title font-semibold">What is event delegation in the DOM?</div>
-                <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make
-                    changes.</div>
+                <div class="collapse-content text-sm">Event delegation is like assigning a single babysitter instead of
+                    one for each child—it lets you handle multiple child elements with just one event listener on a
+                    parent element. Instead of adding click events to every button inside a list, for example, you can
+                    attach the event listener to the list itself and check which button was clicked using event.target.
+                    This makes the code more efficient and improves performance, especially when dealing with
+                    dynamically added elements.</div>
             </div>
             <div class="mt-4 collapse collapse-plus bg-base-100 border border-base-300">
                 <input type="radio" name="my-accordion-3" />
                 <div class="collapse-title font-semibold">What is event bubbling in the DOM?</div>
-                <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make
-                    changes.</div>
+                <div class="collapse-content text-sm">Event bubbling is when an event starts from the target element and
+                    moves up through its parent elements. For example, if you click a button inside a div, the event
+                    fires on the button first, then bubbles up to the div, and then to the body. This behavior lets you
+                    use event delegation but can sometimes cause unintended side effects if multiple elements have event
+                    listeners. If needed, you can stop bubbling using event.stopPropagation().
+                </div>
             </div>
             <div class="mt-4 collapse collapse-plus bg-base-100 border border-base-300">
                 <input type="radio" name="my-accordion-3" />
                 <div class="collapse-title font-semibold">How do you create, add, and remove elements using JavaScript?
                 </div>
-                <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make
-                    changes.</div>
+                <div class="collapse-content text-sm">Creating elements in JavaScript is easy with
+                    document.createElement("tag"), and you can add them to the page using appendChild() or append(). If
+                    you need to insert it before a specific element, insertBefore() is useful. Removing elements is just
+                    as simple—removeChild() deletes a child from its parent, and remove() lets you delete an element
+                    directly. These methods make manipulating the DOM super dynamic and interactive.</div>
             </div>
         </main>
     </div>
